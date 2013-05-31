@@ -1,4 +1,31 @@
 EHR::Application.routes.draw do
+
+  
+resources :doctors
+resources :patient_ident,    only: [:new, :create, :destroy]  
+
+root to: 'static_pages#home'
+
+match '/signup', to: 'doctors#new'
+match '/help',    to: 'static_pages#help'
+
+
+  ##get "patient_ident/new"
+
+  ##get "doctors/new"
+
+ ## get "static_pages/home"
+
+ ## get "static_pages/help"
+
+
+
+
+
+
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
