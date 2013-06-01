@@ -1,6 +1,6 @@
 class RenameColumn < ActiveRecord::Migration
   def up
-  	rename_column :Doctors, :neme, :name
+  	rename_column : doctors, :neme, :name
   	 
 
   end
