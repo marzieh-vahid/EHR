@@ -1,6 +1,6 @@
 class RemoveColumn < ActiveRecord::Migration
   def up
-  	remove_column :doctor, :pass, :passconfirm
+  	remove_column :doctors, :pass, :passconfirm
   end
 
 
