@@ -8,8 +8,8 @@ end
   def create
     @doctor = Doctor.new(params[:doctor])
     if @doctor.save
-    	 sign_in @user
-      # Handle a successful save.
+    	 sign_in @doctor
+             flash[:success] = "Welcome to the EHR App"
         redirect_to @doctor
     else
       render 'new'
