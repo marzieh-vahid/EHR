@@ -2,15 +2,15 @@ EHR::Application.routes.draw do
 
   
 resources :doctors
- resources :sessions, only: [:new, :create, :destroy]
+resources :sessions,   only: [:new, :create, :destroy]
 resources :patient_ident,    only: [:new, :create, :destroy]  
 
 root to: 'static_pages#home'
 
 match '/signup', to: 'doctors#new'
 match '/help',    to: 'static_pages#help'
- match '/signin',  to: 'sessions#new'
-  match '/signout', to: 'sessions#destroy', via: :delete
+match '/signin',  to: 'sessions#new'
+match '/signout', to: 'sessions#destroy', via: :delete
 
   ##get "patient_ident/new"
 
