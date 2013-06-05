@@ -18,10 +18,11 @@ module SessionsHelper
   end
 
   def current_doctor?(doctor)
-    user == current_doctor
+    doctor == current_doctor
   end
 
   def signed_in_doctor
+  	
     unless signed_in?
       store_location
       redirect_to signin_url, notice: "Please sign in."

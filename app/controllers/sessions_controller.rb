@@ -3,11 +3,11 @@ class SessionsController < ApplicationController
   end
  
 
- def create
-     doctor = Doctor.find_by_email(params[:session][:email].downcase)
+  def create
+    doctor = Doctor.find_by_email(params[:session][:email].downcase)
     if doctor && doctor.authenticate(params[:session][:password])
       sign_in doctor
-      redirect_to doctor
+      redirect_back_or doctor
     else
       flash.now[:error] = 'Invalid email/password combination'
       render 'new'
