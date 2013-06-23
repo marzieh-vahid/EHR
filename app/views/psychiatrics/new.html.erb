@@ -1,0 +1,40 @@
+<% provide(:title, 'Psychiatric') %>
+<h1>روان کاوی</h1>
+
+<div class="row">
+  <div class="span6 offset3 nav pull-left ">
+    <%= form_for(@psychiatric) do |f| %>
+
+  <li> <p><%= f.text_field :patientID , :class=> "input-small", :placeholder=>"patientID"%>شماره بیمار</p></li>
+
+   <li>  <p>  <%= f.check_box :anxiety %>اضطراب</p></li>
+
+    <li> <p>  <%= f.check_box :depression %>افسردگی</p></li>
+
+ <li>  <p><%= f.check_box :difficultieswithsexualarousal %>بی میلی جنسی</p></li>
+
+  <li> <p>   <%= f.check_box :difficultyfallingasleep %>مشکل در به خواب رفتن</p></li>
+
+   <li>  <p> <%= f.check_box :difficultystayingasleep %>مشکل در تداوم خواب</p></li>
+   <li>  <p>  <%= f.check_box :excessivewories %>نگرانی های بیش از حد</p></li>
+   <li>  <p>  <%= f.check_box :foodcravings %>میل شدید به غذا</p></li>
+   <li>  <p>  <%= f.check_box :freguuentcrying %>گریه مداوم </p></li>
+   <li>  <p>  <%= f.check_box :guiltythoughts %>احساس گناه</p></li>
+   <li>  <p>  <%= f.check_box :hallucinations %>توهم</p></li>
+   <li>  <p>  <%= f.check_box :irritability %>تحریک پذیری</p></li>
+   <li>  <p> <%= f.check_box :moodswings %>نوسانات خلقی</p></li>
+   <li>  <p> <%= f.check_box :paranoia %>پارانومیا</p></li>
+   <li>  <p> <%= f.check_box :poorappetite %>بی اشتهایی</p></li>
+   <li>  <p>  <%= f.check_box :poorconcentration %>غلظت Cpoor</p></li>
+   <li>  <p>  <%= f.check_box :rapidspeech %>سرعت بالا داشتن</p></li>
+   <li>  <p>  <%= f.check_box :racingthoughts %>افکار رقبتی</p></li>
+   <li>  <p>  <%= f.check_box :riskybehavior %>رفتارهای خطرناک</p></li>
+   <li>  <p>  <%= f.check_box :sensitivity %>حساسیت</p></li>
+   <li>  <p>  <%= f.check_box :stress %>استرس</p></li>
+   <li>  <p>  <%= f.check_box :thoughtsofsuicide %>فکر یا تلاش برای خودکشی</p></li>
+
+
+      <p><%= f.submit "ثبت اطلاعات", class: "btn btn-large " %></p>
+    <% end %>
+  </div>
+</div>

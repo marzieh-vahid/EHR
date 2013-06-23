@@ -45,6 +45,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
+.wall{
+background-image: image-url("wall.jpg");
+}
+
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
@@ -138,6 +142,7 @@ aside {
 }
 /* forms */
 
+
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -175,3 +180,7 @@ input {
     }
   }
 }
+.checkbox_container input {
+  display: inline;
+}
+span.wpcf7-list-item { display: block; }

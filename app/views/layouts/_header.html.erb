@@ -3,25 +3,44 @@
     <div class="container">
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Help", help_path %></li>
-          <% if signed_in? %>
-            <li><%= link_to "Doctors", doctors_path %></li>
+         <li><%= link_to "خانه", '/' %></li>
+          <li><%= link_to "راهنمای سیستم", '/help' %></li>
+          <li><%= link_to "ثبت بیمار جدید", '/patient' %></li>
+
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Account <b class="caret"></b>
+               ورود اطلاعات بالینی بیمار <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "Profile", current_doctor %></li>
-                <li><%= link_to "Settings", edit_doctor_path(current_doctor) %></li>
-                <li class="divider"></li>
-                <li>
-                  <%= link_to "Sign out", signout_path, method: "delete" %>
-                </li>
+                <li><%= link_to " پوست و مو", '/skin' %></li>
+                <li><%= link_to "مغز و اعصاب", '/nerve' %></li>
+                <li><%= link_to "استخوان، عضلات، ماهیچه ها", '/muscle' %></li>
+                <li><%= link_to "چشم", '/eyesystem' %></li>
+                <li><%= link_to "گوش", '/earsystem' %></li>
+                <li><%= link_to "معاینه عمومی", '/general' %></li>
+                <li><%= link_to "سوابق بالینی بیمار", '/history' %></li>
+                <li><%= link_to "روان شناسی", '/psychiatric' %></li>
+
               </ul>
             </li>
+          <% if signed_in? %>
+                    <li><%= link_to "مرور سیستم های بالینی بیمار", '/clinical' %></li>
+
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               درباره پزشک <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "پروفایل پزشک", current_doctor %></li>
+                <li><%= link_to "تنظیمات", edit_doctor_path(current_doctor) %></li>
+                <li class="divider"></li>
+                <li>
+                  <%= link_to "خروج", signout_path, method: "delete" %>
+                </li>
+            </ul>
+            </li>
           <% else %>
-            <li><%= link_to "Sign in", signin_path %></li>
+            <li><%= link_to "ورود", signin_path %></li>
           <% end %>
         </ul>
       </nav>

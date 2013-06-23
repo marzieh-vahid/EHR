@@ -1,0 +1,29 @@
+<% provide(:title, 'General') %>
+<h1>اطلاعت عمومی بیمار</h1>
+
+<div class="row">
+  <div class="span6 offset3 nav pull-left">
+    <%= form_for(@general) do |f| %>
+
+  <li> <p>  <%= f.text_field :patientID, :class=> "input-small", :placeholder=>"patientID" %>شماره بیمار</p></li>
+
+   <li>  <p>  <%= f.check_box :fatigue %>تشنگی شبانه</p></li>
+
+    <li> <p>  <%= f.check_box :fever %>تب</p></li>
+
+ <li>  <p><%= f.check_box :nightsweats %>ندول ها</p></li>
+
+
+  <li> <p>    <%= f.check_box :weakness %>ضعف</p></li>
+
+
+   <li>  <p>  <%= f.check_box :weightgain %>افزایش وزن اخیر</p></li>
+
+   <li>  <p>  <%= f.check_box :weightloss %>کاهش وزن اخیر</p></li>
+
+
+
+      <p><%= f.submit "ثبت اطلاعات", class: "btn btn-large " %></p>
+    <% end %>
+  </div>
+</div>

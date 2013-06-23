@@ -1,0 +1,28 @@
+<% provide(:title, 'Skin') %>
+<h1>پوست و مو</h1>
+
+<div class="row">
+  <div class="span6 offset3 nav pull-left">
+    <%= form_for(@skin) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+  <li> <p>  <%= f.text_field :patientID , :class=> "input-small", :placeholder=>"patientID"%>شماره بیمار</p></li>
+
+   <li>  <p> <%= f.check_box :redness %>قرمزی</p></li>
+
+    <li> <p> <%= f.check_box :rash %>خارش</p></li>
+
+ <li>  <p><%= f.check_box :nodules %>ندولها</p></li>
+
+
+  <li> <p>   <%= f.check_box :hairloss %>ریزش مو</p></li>
+
+
+   <li>  <p>  <%= f.check_box :colorchangesofhandssorfeed %>تغییر رنگ دست و صورت</p></li>
+
+
+
+
+      <p><%= f.submit "ثبت اطلاعات", class: "btn btn-large" %></p>
+    <% end %>
+  </div>
+</div>

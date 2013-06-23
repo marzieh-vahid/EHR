@@ -1,0 +1,29 @@
+<% provide(:title, 'Nerves') %>
+<h1>مغز و اعصاب </h1>
+
+<div class="row">
+  <div class="span6 offset3 nav pull-left">
+    <%= form_for(@nerve) do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
+
+  <li> <p> <%= f.text_field :patientID , :class=> "input-small", :placeholder=>"patientID"%>شماره بیمار</p></li>
+
+   <li>  <p> <%= f.check_box :dizziness %>گیجی</p></li>
+
+    <li> <p>  <%= f.check_box :faintingorlossofconsciousness %>از دست دادن و یا کاهش هوشیاری</p></li>
+
+ <li>  <p><%= f.check_box :headaches %>سر درد</p></li>
+
+
+  <li> <p>   <%= f.check_box :memoryloss %>از دست دادن حافظه</p></li>
+
+
+   <li>  <p>  <%= f.check_box :numbnessortingling %>احساس سوزن سوزن شدن</p></li>
+
+
+
+
+      <p><%= f.submit "ثبت اطلاعات", class: "btn btn-large" %></p>
+    <% end %>
+  </div>
+</div>

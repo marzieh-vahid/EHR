@@ -5,6 +5,8 @@ gem 'bootstrap-sass', '2.1'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'unicode'
 gem 'fog'
+gem 'faker', '1.0.1'
+gem 'will_paginate', '3.0.3'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'

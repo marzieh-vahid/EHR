@@ -3,9 +3,11 @@ class DoctorsController < ApplicationController
     before_filter :signed_in_doctor, only: [:index, :edit, :update]
   before_filter :correct_doctor,   only: [:edit, :update,  :destroy]
 
+
 def show
     @doctor = Doctor.find(params[:id])
-end
+    @patients = @doctor.patients.paginate(page: params[:page]) 
+     end
   def new
   	@doctor=Doctor.new
   end
@@ -34,7 +36,7 @@ flash[:success] = "Profile updated"
   end
 
  def index
-    @doctors = Doctor.all
+    #@doctors = Doctor.all
   end
    def destroy
     Doctor.find(params[:id]).destroy

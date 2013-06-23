@@ -1,0 +1,35 @@
+<% provide(:title, '@patient') %>
+<h1>بیمار جدید</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@patient) do |f| %>
+
+      <%= render 'shared/error_messages', object: f.object %>
+      <%= f.label :نام %>
+      <%= f.text_field :name %>
+
+      <%= f.label :نام_خانوادگی %>
+      <%= f.text_field :family %>
+
+      <%= f.label :کد_ملی %>
+      <%= f.text_field :mellicode %>
+
+      <%= f.label :نام_پدر %>
+      <%= f.text_field :fathername %>
+
+       <%= f.label :تاریخ_تولد %>
+      <%= f.text_field :birthdate %>
+
+       <%= f.label :جنسیت%>
+       <%= f.text_field :gender %>
+
+       <%= f.label :شماره_پرونده_بیمار %>
+      <%= f.text_field :patientID%>
+      <%= f.hidden_field :doctor_id, { :value => current_doctor.id } %>
+
+
+      <%= f.submit "ثبت بیمار جدید", class: "btn btn-large " %> 
+    <% end %>
+  </div>
+</div>

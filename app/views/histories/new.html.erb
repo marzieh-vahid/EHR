@@ -1,0 +1,47 @@
+<% provide(:title, 'History') %>
+<h1>سوابق بالینی بیمار</h1>
+
+<div class="row">
+  <div class="span6 offset3 nav pull-left">
+    <%= form_for(@history) do |f| %>
+
+
+  <li> <p> <%= f.text_field :patientID , :class=> "input-small", :placeholder=>"patientID"%>شماره بیمار</p></li>
+    <li> <p>  تصادفات<%= f.text_field :accidents %></p></li>
+      <li> <p>  آلرژی ها<%= f.text_field :allergies %></p></li>
+  <li> <p>  سابقه شغلی<%= f.text_field :occupationalhistory %></p></li>
+    <li> <p>  سابقه پزشکی خانواده بیمار<%= f.text_field :medicalhistoryofthefamily %></p></li>
+
+    <li>  <p>  <%= f.check_box :surgery %>جراحی</p></li>
+      <li>  <p> <%= f.check_box :hospitalization %>سابقه بستری در بیمارستان</p></li>
+
+
+
+   <li>  <p>  <%= f.check_box :smoking %>استعمال دخانیات </p></li>
+
+   <li>  <p>  <%= f.check_box :alcohol %>مصرف الکل</p></li>
+
+    <li> <p> <%= f.check_box :animalcontact %>تماس با حیوانات</p></li>
+
+ <li>  <p><%= f.check_box :bloodtransfusion %>انتقال خون </p></li>
+
+   <li>  <p>  <%= f.check_box :vaccination %>واکسیناسیون</p></li>
+
+<P><b> تست های غربالگری</b></p>
+  <li> <p>    <%= f.check_box :fecaloccultblood %>وجود خون در مدفوع</p></li>
+
+   <li>  <p>  <%= f.check_box :mammography %>ماموگرافی</p></li>
+   <li>  <p> <%= f.check_box :papsmear %> پاپ اسمیر</p></li>
+   <li>  <p>   <%= f.check_box :ppd %>PPD</p></li>
+     <li> <p> تست های دیگر<%= f.text_field :othertests %> </p></li>
+
+   
+
+
+
+
+
+      <p><%= f.submit "ثبت سوابق بیمار", class: "btn btn-large" %></p>
+    <% end %>
+  </div>
+</div>

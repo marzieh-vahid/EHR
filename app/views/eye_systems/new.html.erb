@@ -1,0 +1,31 @@
+<% provide(:title, 'eyesystem') %>
+<h1>Eye_system</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@eyesystem) do |f| %>
+
+    
+          <%= render 'shared/error_messages', object: f.object %>
+
+  <li> <p> Patient Number: <%= f.text_field :patientID %></p></li>
+
+     <li>  <p> Pain: <%= f.check_box :pain %></p></li>
+  <li> <p>   Dryness:  <%= f.check_box :dryness %></p></li>
+
+
+   <li>  <p> Redness: <%= f.check_box :redness %></p></li>
+
+    <li> <p> Loss of vision: <%= f.check_box :lossofvision %></p></li>
+
+ <li>  <p>Double or blurred vision:<%= f.check_box :doubleorblurredvision %></p></li>
+
+
+
+
+
+
+      <p><%= f.submit "Add informations of eyes", class: "btn btn-large btn-primary" %></p>
+    <% end %>
+  </div>
+</div>

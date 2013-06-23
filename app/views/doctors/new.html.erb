@@ -4,23 +4,23 @@
   <div class="span6 offset3">
     <%= form_for(@doctor) do |f| %>
 
-      <%= render 'shared/error_messages' %>
+      <%= render 'shared/error_messages', object: f.object %>
 
-      <%= f.label :First_Name %>
+      <%= f.label :نام %>
       <%= f.text_field :name %>
-      <%= f.label :last_name%>
+      <%= f.label :نام_خانوادگی%>
       <%= f.text_field :family %>
-      <%= f.label :email %>
+      <%= f.label :ایمیل %>
       <%= f.text_field :email %>
-      <%= f.label :Doctor_Number %>
+      <%= f.label :شماره_پزشک %>
       <%= f.password_field :pid %>
-         <%= f.label :password %>
+         <%= f.label :رمز_عبور %>
       <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.label :تائئی_رمز_عبور, "Confirmation" %>
       <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+      <%= f.submit "ایجاد اکانت", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
 </div>

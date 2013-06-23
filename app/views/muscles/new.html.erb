@@ -1,0 +1,31 @@
+<% provide(:title, 'muscle_joints_bone_system') %>
+<h1> استخوان ها، مفاصل، ماهیچه ها </h1>
+
+<div class="row">
+  <div class="span6 offset3 nav pull-left">
+    <%= form_for(@muscle) do |f| %>
+
+      <%= render 'shared/error_messages', object: f.object %>
+
+
+  <li> <p> <%= f.text_field :patientID , :class=> "input-small", :placeholder=>"patientID"%>شماره بیمار</p></li>
+  
+
+   <li>  <p>   <%= f.check_box :jointpain %>درد در مفصل </p></li>
+
+    <li> <p>  <%= f.check_box :jointswelling %>ورم مفاصل</p></li>
+
+ <li>  <p><%= f.check_box :muscleweakness %>ضعف در ماهیچه ها</p></li>
+
+
+  <li> <p>    <%= f.check_box :numbness %>بی حسی</p></li>
+
+
+  
+
+
+
+      <p><%= f.submit "ثبت اطلاعات", class: "btn btn-large " %></p>
+    <% end %>
+  </div>
+</div>

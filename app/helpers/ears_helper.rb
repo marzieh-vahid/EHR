@@ -1,0 +1,2 @@
+module EarsHelper
+end

@@ -1,0 +1,39 @@
+<% provide(:title, 'patientident') %>
+<h1>New Patient</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@patientident) do |f| %>
+
+          <%= render 'shared/error_messages', object: f.object %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :family %>
+      <%= f.text_field :family %>
+
+      <%= f.label :National_code %>
+      <%= f.text_field :mellicode %>
+
+      <%= f.label :fathername %>
+      <%= f.text_field :fathername %>
+
+       <%= f.label :daybirth %>
+      <%= f.text_field :daybirth %>
+       <%= f.label :monthbirth %>
+      <%= f.text_field :monthbirth %>
+       <%= f.label :yearbirth %>
+      <%= f.text_field :yearbirth %>
+<%= f.radio_button :gender, true %><%= f.label :man %><br />
+<%= f.radio_button :gender, false %><%= f.label :women %><br />
+       <%= f.label :gender%>
+       <%= f.label :number_of_doctor %>
+      <%= f.text_field :doctorid %>
+       <%= f.label :patient_ID %>
+      <%= f.text_field :patientID%>
+
+
+      <%= f.submit "Create a new patient", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<html>
+<head >
+
+</head>
+
+<body>
+<h1>مرور سیستم های بالینی بیمار</h1>
+
+<ul class="nav pull-left">
+	<div  align=top>
+<%= button_to " عمومی",'/general', :method => "get" %>
+<%= button_to " پوست",'/skin', :method => "get" %>
+<%= button_to " اعصاب وروان",'/nerve', :method => "get" %>
+<%= button_to " گوش",'/earsystem', :method => "get" %>
+
+</ul>
+<ul class="nav pull-right">
+
+<div  align=top>
+<%= button_to " مفاصل، ماهیچه ها، استخوان ها",'/muscle', :method => "get" %>
+<%= button_to " روان شناسی ",'/psychiatric', :method => "get" %>
+<%= button_to " سیستم چشم ",'/eyesystem', :method => "get" %>
+<%= button_to "سوابق بالینی بیمار",'/history', :method => "get" %>
+
+</div>
+</div>
+
+</ul>
+    
+</p>
+
+</body>
+</html>

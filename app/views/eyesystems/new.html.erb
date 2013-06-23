@@ -1,0 +1,32 @@
+<% provide(:title, 'eyesystem') %>
+<h1>سیستم بینایی</h1>
+
+<div class="row">
+  <div class="span6 offset3 nav pull-left">
+    <%= form_for(@eyesystem) do |f|   %>
+
+    
+          <%= render 'shared/error_messages', object: f.object %>
+
+  <li> <p>  <%= f.text_field  :patient_id , :class=> "input-small", :placeholder=>"patient_id"%>شماره بیمار</p></li>
+
+
+     <li>  <p> <%= f.check_box :pain %> درد     </p></li>
+  <li> <p>       <%= f.check_box :dryness %> خشکی</p></li>
+
+
+   <li>  <p>     <%= f.check_box :redness %>قرمزی</p></li>
+
+    <li> <p>   <%= f.check_box :lossofvision %>کاهش بینایی</p></li>
+
+ <li>  <p><%= f.check_box :doubleorblurredvision %>دوبینی</p></li>
+
+
+
+
+
+
+      <p><%= f.submit "ورود اطلاعات چشم", class: "btn btn-large" %></p>
+    <% end %>
+  </div>
+</div>

@@ -2,13 +2,23 @@
 <div class="row">
   <aside class="span4">
     <section>
-<h1>
-	<%= gravatar_for @doctor %>
+      <h1>
+        <%= gravatar_for @doctor %>
+       <p> <%= @doctor.name %></p>
+       <p> <%= @doctor.family %></p>
 
-	<%= @doctor.name %> 
-	<%= @doctor.family %> 
-
-</h1>
-</section>
+      </h1>
+    </section>
+    <section>
+    </section>
   </aside>
+  <div class="span8">
+    <% if @doctor.patients.any? %>
+      <h3>Patients (<%= @doctor.patients.count %>)</h3>
+      <ol class="microposts">
+        <%= render @doctor.patients %>
+      </ol>
+      <%= will_paginate @patients %>
+    <% end %>
+  </div>
 </div>

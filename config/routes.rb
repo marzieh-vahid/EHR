@@ -1,16 +1,70 @@
 EHR::Application.routes.draw do
 
   
+
+  #get "ear_systems/new"
+
+  #get "eye_systems/new"
+
+  #get "muscle_joints_bone_systems/new"
+
+  #get "muscle_joints_bones/new"
+
+  #get "eyes/new"
+
+  #get "nerves/new"
+
+  #get "ears/new"
+
+ # get "nervouses/new"
+#
+  #get "histories/new"
+
+  ##get "skins/new"
+
+  ##get "psychiatrics/new"
+
+ ## get "nervouss/new"
+
+  ##get "muscle_joints_boness/new"
+
+ ## get "historys/new"
+
+  ##get "eyess/new"
+
+  ##get "earss/new"
+
+  ##get "generals/new"
+resources :skins
+resources :psychiatrics
+resources :nerves
+resources :muscles
+resources :histories
+resources :eyesystems
+resources :earsystems
+resources :generals
 resources :doctors
 resources :sessions,   only: [:new, :create, :destroy]
-resources :patient_ident,    only: [:new, :create, :destroy]  
-
+resources :patients, only:[:new, :show, :create]
+resources :static_pages
 root to: 'static_pages#home'
 
 match '/signup', to: 'doctors#new'
 match '/help',    to: 'static_pages#help'
+match '/clinical', to: 'static_pages#clinical'
 match '/signin',  to: 'sessions#new'
 match '/signout', to: 'sessions#destroy', via: :delete
+match '/patients', to: 'patients#show'
+match '/history',   to: 'histories#new'
+match '/skin',   to: 'skins#new'
+match '/psychiatric', to:'psychiatrics#new'
+match '/nerve',  to:'nerves#new'
+match '/muscle',  to:'muscles#new'
+match '/eyesystem',  to:'eyesystems#new'
+match '/earsystem', to:'earsystems#new'
+match '/general', to:'generals#new'
+match '/patient', to:'patients#new'
+
 
   ##get "patient_ident/new"
 

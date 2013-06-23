@@ -1,6 +1,7 @@
 class Doctor < ActiveRecord::Base
   attr_accessible :email, :family, :name, :password, :pid, :password_confirmation
   has_secure_password
+  has_many :patients
   before_save { |doctor| doctor.email = email.downcase }
     before_save :create_remember_token
   validates :name, presence: true, length: { maximum: 50 }
