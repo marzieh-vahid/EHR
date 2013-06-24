@@ -20,16 +20,6 @@ module SessionsHelper
   def current_doctor?(doctor)
     doctor == current_doctor
   end
-  def current_patients=(doctor)
-    @current_patients=doctor.patients
-  end
-  def current_patients
-    @current_patients||=Patient.find_by_doctor_id[params :current_doctor.id]
-    
-  end
-  def current_patients=(doctor)
-    @current_patients=doctor.patients
-  end
 
   def signed_in_doctor
   	
