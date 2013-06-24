@@ -26,10 +26,18 @@
 
        <%= f.label :شماره_پرونده_بیمار %>
       <%= f.text_field :patientID%>
+<%if !current_doctor.nil? then %>
+    
+
       <%= f.hidden_field :doctor_id, { :value => current_doctor.id } %>
+    <% end %>
 
+<% if  current_doctor.nil? then%>
+      <%= f.hidden_field :doctor_id, { :value => :patientID} %>
 
-      <%= f.submit "ثبت بیمار جدید", class: "btn btn-large " %> 
+    <% end %>
+
+      <%= f.submit "ثبت بیمار جدید", class: "btn btn-large btn-primary " %> 
     <% end %>
   </div>
 </div>
